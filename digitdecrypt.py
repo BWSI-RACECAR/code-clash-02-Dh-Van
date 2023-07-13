@@ -32,20 +32,10 @@ class Solution:
             #type num: int
             #return type: int
 
-            s = str(num)
-            numList = []
-            for c in s:
-                 numList.append(int(c))
             res = 0
-            for n in numList:
-                res += n
-
-            if(res < 10):
-                return res
-            else:
-                return Solution.digitdecrypt(self, res)
+            for n in str(num): res += int(n)
+            return (res if (res < 10) else Solution.digitdecrypt(self, res))
             
-            pass
  
 def main():
     input1= input()

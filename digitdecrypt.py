@@ -31,10 +31,7 @@ class Solution:
     def digitdecrypt(self, num):
             #type num: int
             #return type: int
-
-            res = 0
-            for n in str(num): res += int(n)
-            return (res if (res < 10) else Solution.digitdecrypt(self, res))
+            return (sum(map(int, str(num))) if (sum(map(int, str(num))) < 10) else Solution.digitdecrypt(self, sum(map(int, str(num)))))
             
  
 def main():

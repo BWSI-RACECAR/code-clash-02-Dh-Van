@@ -41,9 +41,9 @@ class Solution:
                 res += n
 
             if(res < 10):
-                 return res
+                return res
             else:
-                 Solution.digitdecrypt(self, res)
+                return Solution.digitdecrypt(self, res)
             
             pass
  
